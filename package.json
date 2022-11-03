@@ -1,0 +1,42 @@
+{
+  "name": "mr-speaker",
+  "version": "2.0.10_BREAKDOWN",
+  "description": "Mr.Speaker's Main Brain is This!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/mr-speaker.git"
+  },
+  "keywords": [
+    "node",
+    "Mr.Speaker",
+    "discord",
+    "bot"
+  ],
+  "author": "STr3292",
+  "license": "ISC",
+  "engines": {
+    "node": "^16.9.0",
+    "npm": "^6.13.4"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.9.0",
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/rest": "0.1.0-canary.0",
+    "@discordjs/voice": "^0.7.5",
+    "discord-api-types": "^0.25.2",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "ffmpeg-static": "^4.4.0",
+    "fs": "0.0.1-security",
+    "node-cron": "^3.0.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "tweetnacl": "^1.0.3",
+    "ytdl-core": "^4.9.2"
+  }
+}
