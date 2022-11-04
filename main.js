@@ -71,6 +71,7 @@ const slashCommands = [
         }]
     }]
   },
+  /* Railway対応
   {
     name: 'play',
     description: '任意の音声を再生するわよ!',
@@ -81,6 +82,7 @@ const slashCommands = [
       requeired: true
     }]
   },
+  */
   {
     name: 'lbrt',
     description: '[STEALTH]アンタの代わりに伝えてあげるわ。アタシに任せなさい!',

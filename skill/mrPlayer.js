@@ -1,5 +1,7 @@
 const {joinVoiceChannel, entersState, VoiceConnectionStatus, createAudioResource, StreamType, createAudioPlayer, AudioPlayerStatus, NoSubscriberBehavior, generateDependencyReport} = require("@discordjs/voice");
+/* Railway対応
 const ytdl = require('ytdl-core');
+*/
 
 // デフォルトステージ
 const vchannelId = process.env.ID_ITORADI
@@ -16,12 +18,14 @@ module.exports.mrPlayer = async (interaction, url, client) => {
   // 音源指定
   if (url !== undefined) {
     if (url.startsWith('https://youtu.be/') || url.startsWith('https://www.youtube.com/') || url.startsWith('https://music.youtube.com/')) {
+      /* Railway対応
       resource = ytdl(ytdl.getURLVideoID(url), {
         filter: format => format.audioCodec === 'opus' && format.container === 'webm',
         quality: 'highest',
         highWaterMark: 32 * 1024 * 1024
       });
       disc = createAudioResource(resource, {inputType: StreamType.WebmOpus});
+      */
     } else {
       resource = url;
       disc = createAudioResource(resource, {inputType: StreamType.Arbitrary});

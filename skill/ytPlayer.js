@@ -1,3 +1,4 @@
+/* Railway対応
 const dotenv = require('dotenv');
 dotenv.config();
 const ytdl = require('ytdl-core');
@@ -67,3 +68,4 @@ module.exports.play = async (message) => {
     await stream().then(message.reply(kaomoji));
   }
 }
+*/
