@@ -1,6 +1,6 @@
 {
   "name": "mr-speaker",
-  "version": "2.0.10_BREAKDOWN",
+  "version": "2.0.11_BREAKDOWN",
   "description": "Mr.Speaker's Main Brain is This!",
   "main": "main.js",
   "scripts": {
