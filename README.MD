@@ -1,9 +1,43 @@
 # Mr.Speaker
+
+simple and cute, complex is cool.
+
+## なにこれ
+
 [Discord](https://discord.com)に生息するBotの一種。
-[Railway](https://railway.app)にて絶賛稼働中。
+[Railway](https://railway.app)にて(たぶん)稼働中。
 
-## AUTHOR
-[STr3292](https://www.uebit.tk/STr3292)
+## できること
 
-## LICENSE
-[MIT](https://choosealicense.com/licenses/mit/)
+### スラッシュコマンド
+
+#### ボイスチャンネルでの音楽再生
+
+`/play <YouTube動画のURL>`
+
+**[YouTube](https://www.youtube.com/)動画のURL**を指定してくれれば、その音声を君が今いるボイスチャンネルで再生するわよ！
+
+#### ユーザーネームの色変更
+
+`/set <カラーコード>`
+
+名前の色を**カラーコード**[(?)](https://htmlcolorcodes.com/color-picker/)で指定した色に変更するぜ！
+
+#### その他
+
+スラッシュを入力すればオプションが色々出てくるぞ！
+好きにしてくれ！
+
+### 聞き専チャンネル用
+
+#### デビロイド
+
+チャット内容を[デビルマン](https://dic.nicovideo.jp/a/%E3%83%87%E3%83%93%E3%83%AB%E3%83%9E%E3%83%B3)が読み上げてくれます。ここすき。
+
+---
+
+<div align="right">
+<a href="https://www.xeramiya.net">
+<img src="https://raw.githubusercontent.com/xeramiya/xeramiya/main/assets/xeramiya.svg" width=8% alt="Xeramiya Logo" />
+</a>
+</div>
