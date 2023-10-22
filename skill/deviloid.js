@@ -1,5 +1,5 @@
-const request = require('request');
-const mrPlayer = require('./mrPlayer.js');
+const request = require("request");
+const mrPlayer = require("./mrPlayer.js");
 
 async function slicedDialogueOr(letters, messageSize, curloca, client) {
   // Discordの文字数制限2000字で強制停止
@@ -8,10 +8,16 @@ async function slicedDialogueOr(letters, messageSize, curloca, client) {
     return;
   }
 
-  await mrPlayer.mrPlayer(undefined, './asset/audio/sound/deviloid/syllabary/' + letters[curloca] + '.mp3', client).then( () => {
-    console.log("発音: " + letters[curloca]);
-    slicedDialogueOr(letters, messageSize, curloca + 1, client);
-  });
+  await mrPlayer
+    .mrPlayer(
+      undefined,
+      "./asset/audio/sound/deviloid/syllabary/" + letters[curloca] + ".mp3",
+      client
+    )
+    .then(() => {
+      console.log("発音: " + letters[curloca]);
+      slicedDialogueOr(letters, messageSize, curloca + 1, client);
+    });
 }
 
 module.exports.deviloid = async (message, client) => {
@@ -22,14 +28,14 @@ module.exports.deviloid = async (message, client) => {
   var options = {
     uri: BASE_URL,
     headers: {
-      'Content-Type': `application/x-www-form-urlencoded`,
-      'Content-Type': `application/json`
+      "Content-Type": `application/x-www-form-urlencoded`,
+      "Content-Type": `application/json`,
     },
     json: {
-      "app_id": GooAPI_KEY,
-      "sentence": message.content,
-      "output_type": OUTPUT_TYPE
-    }
+      app_id: GooAPI_KEY,
+      sentence: message.content,
+      output_type: OUTPUT_TYPE,
+    },
   };
 
   request.post(options, async (error, response, body) => {
@@ -38,10 +44,12 @@ module.exports.deviloid = async (message, client) => {
     var letters = body.converted.slice();
     var messageSize = letters.length;
     var curloca = 0;
-    console.log("DEVILOID_WAKEUP\nメッセージ配列:" + letters + "\n文字数:" + messageSize);
-  
+    console.log(
+      "DEVILOID_WAKEUP\nメッセージ配列:" + letters + "\n文字数:" + messageSize
+    );
+
     slicedDialogueOr(letters, messageSize, curloca, client);
   });
 
   return;
-}
+};

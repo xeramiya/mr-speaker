@@ -1,12 +1,21 @@
-const {joinVoiceChannel, entersState, VoiceConnectionStatus, createAudioResource, StreamType, createAudioPlayer, AudioPlayerStatus, NoSubscriberBehavior, generateDependencyReport} = require("@discordjs/voice");
+const {
+  joinVoiceChannel,
+  entersState,
+  VoiceConnectionStatus,
+  createAudioResource,
+  StreamType,
+  createAudioPlayer,
+  AudioPlayerStatus,
+  NoSubscriberBehavior,
+  generateDependencyReport,
+} = require("@discordjs/voice");
 /* Railway対応
 const ytdl = require('ytdl-core');
 */
 
 // デフォルトステージ
-const vchannelId = process.env.ID_ITORADI
+const vchannelId = process.env.ID_ITORADI;
 const guildId = process.env.ID_BIT_SERVER;
-
 
 /*
   mrPlayerをスラッシュコマンドで使用するときは何かしら気の利いたリプライをinteractionに飛ばしてください
@@ -17,7 +26,11 @@ module.exports.mrPlayer = async (interaction, url, client) => {
 
   // 音源指定
   if (url !== undefined) {
-    if (url.startsWith('https://youtu.be/') || url.startsWith('https://www.youtube.com/') || url.startsWith('https://music.youtube.com/')) {
+    if (
+      url.startsWith("https://youtu.be/") ||
+      url.startsWith("https://www.youtube.com/") ||
+      url.startsWith("https://music.youtube.com/")
+    ) {
       /* Railway対応
       resource = ytdl(ytdl.getURLVideoID(url), {
         filter: format => format.audioCodec === 'opus' && format.container === 'webm',
@@ -28,10 +41,13 @@ module.exports.mrPlayer = async (interaction, url, client) => {
       */
     } else {
       resource = url;
-      disc = createAudioResource(resource, {inputType: StreamType.Arbitrary});
+      disc = createAudioResource(resource, { inputType: StreamType.Arbitrary });
     }
   } else {
-    return interaction.reply({content: "ERR: URL未定義、管理者に報告をお願いします。", ephemeral: true});
+    return interaction.reply({
+      content: "ERR: URL未定義、管理者に報告をお願いします。",
+      ephemeral: true,
+    });
   }
 
   // ステージ指定
@@ -40,7 +56,11 @@ module.exports.mrPlayer = async (interaction, url, client) => {
     stageId = vchannelId;
   } else {
     if (!(memberVc = interaction.member.voice.channel)) {
-      return interaction.editReply({content: "接続先VC不明: このコマンドは任意のVCに参加している時のみ使用可能です。", ephemeral: true});
+      return interaction.editReply({
+        content:
+          "接続先VC不明: このコマンドは任意のVCに参加している時のみ使用可能です。",
+        ephemeral: true,
+      });
     } else {
       guild = interaction.guild;
       stageId = memberVc.id;
@@ -51,10 +71,12 @@ module.exports.mrPlayer = async (interaction, url, client) => {
     guildId: guild.id,
     channelId: stageId,
     adapterCreator: guild.voiceAdapterCreator,
-    selfMute: false
+    selfMute: false,
   });
 
-  const player = createAudioPlayer({behaviors: {noSubscriber: NoSubscriberBehavior.Pause}});
+  const player = createAudioPlayer({
+    behaviors: { noSubscriber: NoSubscriberBehavior.Pause },
+  });
 
   await player.play(disc);
   await connection.subscribe(player);
@@ -64,4 +86,4 @@ module.exports.mrPlayer = async (interaction, url, client) => {
   await entersState(player, AudioPlayerStatus.Idle, 24 * 60 * 60 * 1000);
   console.log("DOOONE!");
   return;
-}
+};
