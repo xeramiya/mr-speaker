@@ -1,11 +1,11 @@
-# Mr.Speaker
+# Mr. Speaker
 
 simple and cute, complex is cool.
 
 ## なにこれ
 
 [Discord](https://discord.com)に生息するBotの一種。
-[Railway](https://railway.app)にて(たぶん)稼働中。
+[Fly.io](https://fly.io/)にて稼働中
 
 ## できること
 
@@ -38,6 +38,6 @@ simple and cute, complex is cool.
 
 <div align="right">
 <a href="https://www.xeramiya.net">
-<img src="https://raw.githubusercontent.com/xeramiya/xeramiya/main/assets/xeramiya.svg" width=8% alt="Xeramiya Logo" />
+<img src="https://raw.githubusercontent.com/xeramiya/xeramiya/main/assets/xeramiya.svg" width=16% alt="Xeramiya Logo" />
 </a>
 </div>
