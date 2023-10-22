@@ -4,7 +4,7 @@ simple and cute, complex is cool.
 
 ## なにこれ
 
-[Discord](https://discord.com)に生息するBotの一種。
+[Discord](https://discord.com)に生息する Bot の一種。
 [Fly.io](https://fly.io/)にて稼働中
 
 ## できること
@@ -15,13 +15,11 @@ simple and cute, complex is cool.
 
 `/play <YouTube動画のURL>`
 
-**[YouTube](https://www.youtube.com/)動画のURL**を指定してくれれば、その音声を君が今いるボイスチャンネルで再生するわよ！
+**[YouTube](https://www.youtube.com/)動画の URL**を指定してくれれば、その音声を君が今いるボイスチャンネルで再生するわよ！
 
 #### ユーザーネームの色変更
 
 `/set <カラーコード>`
-
-名前の色を**カラーコード**[(?)](https://htmlcolorcodes.com/color-picker/)で指定した色に変更するぜ！
 
 #### その他
 
@@ -38,6 +36,6 @@ simple and cute, complex is cool.
 
 <div align="right">
 <a href="https://www.xeramiya.net">
-<img src="https://raw.githubusercontent.com/xeramiya/xeramiya/main/assets/xeramiya.svg" width=16% alt="Xeramiya Logo" />
+<img src="https://raw.githubusercontent.com/xeramiya/xeramiya/main/assets/xeramiya.svg" width=8% alt="Xeramiya Logo" />
 </a>
 </div>
