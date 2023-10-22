@@ -1,6 +1,6 @@
 # Mr. Speaker
 
-simple and cute, complex is cool.
+Simple and cute, complex is cool.
 
 ## なにこれ
 
