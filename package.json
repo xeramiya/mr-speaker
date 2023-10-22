@@ -1,6 +1,6 @@
 {
   "name": "mr-speaker",
-  "version": "2.2.0_REBIRTH",
+  "version": "2.2.1_REBIRTH",
   "description": "Mr.Speaker's Main Brain is This!",
   "main": "main.js",
   "scripts": {
